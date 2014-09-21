@@ -33,10 +33,10 @@ head.ready(function() {
 //    });
 
     $('#form1 form').validate();
-    $('#form2').validate();
     $('#form3').validate();
     $('#form4').validate();
-    $('#form5 form').validate();
+    $('#form5').validate();
+    $('#form2 form').validate();
 
 
 

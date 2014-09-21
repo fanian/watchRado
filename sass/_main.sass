@@ -443,51 +443,13 @@ header
         vertical-align: middle
         width: 200px
 
-
-
-
-.reviews
-  h2
-    margin-bottom: 27px
-
-  .reviews_in
-    @extend %in
-  .review__item
-    +background-clip(padding-box)
-    width: 300px
-    position: relative
-    display: inline-block
-    margin-right: 45px
-    +border-radius(8px)
-    +background-clip(padding-box)
-    background-color: #efefef
-    padding: 23px 18px
-    +box
-    +clr
-    &:last-child
-      margin-right: 0
-    &:after
-      position: absolute
-      content: ""
-      bottom: -37px
-      left: 20px
-      +s(review_popup)
-
-    h3
-      color: #1e1e1e
-      +pfl
-      text-transform: uppercase
-      margin-bottom: 18px
-    p
-      +pfl
-      color: #3c3c3c
-      font-size: 16px
-
-
 .order
-  margin-top: 70px
+  margin-top: 65px
   .order_in
     @extend %in
+  h2
+    color: #000000
+    margin-bottom: 30px
   &__item
     width: 300px
     +border-radius(8px)
@@ -497,7 +459,7 @@ header
     padding-top: 25px
     padding-bottom: 40px
     display: inline-block
-    margin-right: 45px
+    margin-right: 40px
     +box
     &:last-child
       margin-right: 0
@@ -533,13 +495,56 @@ header
     margin-top: 25px
     input
       width: 250px
-    .button
-      padding: 0 46px
+      border: solid 2px #dbdbdb
+    .button--form
+      padding: 0 68px
+      font-size: 24px
+      margin-top: 20px
 
 
 
+.reviews
+  +clr
+  margin-top: 60px
+  h2
+    margin-bottom: 20px
+    color: #000
+
+  .reviews_in
+    @extend %in
+  .review__item
+    +background-clip(padding-box)
+    width: 300px
+    position: relative
+    display: inline-block
+    margin-right: 40px
+    +border-radius(8px)
+    +background-clip(padding-box)
+    padding: 23px 18px
+    +box
+    +clr
+    +box-shadow(inset 0 -2px 0 rgba(0,0,0,.15))
+    +background(linear-gradient(to bottom left, #f5f5f5 0%, #e1e5eb 100%))
 
 
+    &:last-child
+      margin-right: 0
+    &:after
+      position: absolute
+      content: ""
+      bottom: -33px
+      left: 17px
+      +s(review_popup)
+
+    h3
+      color: #1e1e1e
+      +pfl
+      text-transform: uppercase
+      margin-bottom: 15px
+    p
+      +pfl
+      color: #3c3c3c
+      font-size: 16px
 
 
 .bottom
@@ -548,6 +553,7 @@ header
   +background-size(cover)
   padding-top: 40px
   height: 750px
+  margin-top: 70px
   .logo
     margin-top: 0
 
