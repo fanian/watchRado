@@ -329,7 +329,7 @@ header
         position: absolute
         content: ""
         top: -140px
-        left: 72px
+        left: -72px
         background: url(../img/arrows.png) center no-repeat
         width: 280px
         height: 111px
@@ -365,68 +365,83 @@ header
     padding: 10px 0
 
 
-.choose
-  padding-top: 50px
-  padding-bottom: 70px
+.history
   +box
-  .title--black
-    font-family: 'Conv_PFDinTextCondPro-XBlack'
-    font-size: 72px
-    text-align: center
-    font-weight: normal
-    text-transform: uppercase
-    line-height: 1em
-
-  .choose_in
+  +clr
+  h2
+    color: #000
+    margin-bottom: 20px
+  .history_in
     @extend %in
-  .choose__video-block
-    margin-top: -10px
+    width: 860px
     +clr
-    .choose__video-block--right
-      float: right
-      width: 470px
-      margin-top: 160px
+  &__img
+    float: left
+    +clr
+  &__text
+    width: 450px
+    +clr
+    float: right
+    text-align: left
+    p
+      margin-top: 30px
+      line-height: 1.5em
+  &__logo
+    margin-bottom: 15px
+    margin-top: 10px
+
+.our
+  background: url(../img/our_bg.jpg) center no-repeat
+  +background-size(cover)
+  height: 500px
+  margin-top: -45px
+  padding-top: 65px
+  +clr
+  +box
+  h2
+    font-size: 36px
+    color: #ffffff
+  .our_in
+    @extend %in
+    margin-top: 30px
+    +clr
+  .our_left
+    +clr
+    float: left
+    background: url(../img/russia.png) center no-repeat
+    height: 330px
+    width: 550px
+    .our_delivery
+      margin-top: 40px
+      font-size: 18px
+      position: relative
+      padding-left: 100px
+      color: #ffffff
+      &:before
+        position: absolute
+        content: ""
+        background: url(../img/map_ico.png) left no-repeat
+        width: 80px
+        height: 64px
+        top: -22px
+        left: 0
+  .our_right
+    margin-top: 20px
+    float: right
+    width: 360px
+    +clr
+    .our_item
+      display: table
+      margin-bottom: 20px
+      color: #ffffff
+      .our_img
+        float: left
+        margin-right: 20px
       p
         font-size: 18px
-        line-height: 1.5em
-      .button--wide
-        padding: 25px 58px 0
-        letter-spacing: 3px
-        display: inline-block
-        margin-top: 35px
-    .choose__video-block--left
-      float: left
-      width: 465px
-      margin-left: -20px
-      a
-        text-decoration: none
-      .video__img
-        position: relative
-        display: block
-        width: 465px
-        height: 445px
-        +clr
-        img
-          +border-radius(20px)
-      .video__play
-        position: relative
-        font-family: 'rosa_marenaregular'
-        font-size: 24px
-        color: #1e1e1e
-        line-height: 0.8em
-        left: 97%
-        bottom: -80px
-        z-index: 1
-        &:before
-          position: absolute
-          content: ""
-          +s(play)
-          top: 5px
-          left: -94px
-
-
-
-
+        display: table-cell
+        vertical-align: middle
+        width: 200px
 
 
 
@@ -522,58 +537,7 @@ header
       padding: 0 46px
 
 
-.our
-  background: url(../img/our_bg.png) center no-repeat
-  +background-size(cover)
-  height: 500px
-  margin-top: 65px
-  padding-top: 65px
-  +clr
-  +box
-  h2
-    font-size: 36px
-    color: #ffffff
-  .our_in
-    @extend %in
-    margin-top: 30px
-    +clr
-  .our_left
-    +clr
-    float: left
-    background: url(../img/russia.png) center no-repeat
-    height: 330px
-    width: 550px
-    .our_delivery
-      margin-top: 40px
-      font-size: 18px
-      position: relative
-      padding-left: 100px
-      color: #ffffff
-      &:before
-        position: absolute
-        content: ""
-        background: url(../img/map_ico.png) left no-repeat
-        width: 80px
-        height: 64px
-        top: -22px
-        left: 0
-  .our_right
-    margin-top: 20px
-    float: right
-    width: 360px
-    +clr
-    .our_item
-      display: table
-      margin-bottom: 20px
-      color: #ffffff
-      .our_img
-        float: left
-        margin-right: 20px
-      p
-        font-size: 18px
-        display: table-cell
-        vertical-align: middle
-        width: 200px
+
 
 
 
