@@ -50,6 +50,26 @@ input, textarea
   &:hover
     color: #000000
     background-color: lighten(#ffffff, 10%)
+.button--yellow
+  display: block
+  text-align: center
+  +box
+  +border-radius(10px)
+  padding: 0 101px
+  height: 70px
+  color: #1e1e1e
+  +single-text-shadow
+  margin: 10px auto auto
+  font-family: 'pf_highway_sans_probold'
+  font-size: 36px
+  +background-clip(padding-box)
+  +border-radius(4px)
+  letter-spacing: 1px
+  +box-shadow(inset 0 -4px 0 rgba(200,170,20,.55))
+  +background-image(linear-gradient(to bottom, #ffef81 0%, #f9db27 100%))
+  &:hover
+    +background-image(linear-gradient(to bottom, #f9db27 0%, #ffef81 100%))
+
 .title
   text-align: center
   font-size: 48px
@@ -215,6 +235,136 @@ header
     height: 0
 
 
+.style
+  +clr
+  padding-top: 60px
+  padding-bottom: 40px
+  .style_in
+    @extend %in
+    +clr
+  h2
+    color: #1e1e1e
+    margin-bottom: 30px
+  .style__item
+    display: inline-block
+    width: 320px
+    height: 260px
+    position: relative
+    margin-right: 13px
+    &:last-child
+      margin-right: 0
+    &:after
+      position: absolute
+      content: ""
+      top: 0
+      left: 0
+      bottom: 0
+      right: 0
+      +background-clip(padding-box)
+      border: solid rgba(#fff,.4) 4px
+    img
+      display: block
+
+.specs
+  padding-top: 80px
+  padding-bottom: 40px
+  +clr
+  +box
+  background: url(../img/specs_bg.png) center center no-repeat
+  height: 780px
+  +background-size(cover)
+  h2
+    margin-bottom: 50px
+  .specs_in
+    @extend %in
+    width: 885px
+    +clr
+  &__items
+    float: left
+    margin-top: 40px
+    width: 240px
+    margin-right: 35px
+    &:last-child
+      margin-right: 0
+    +box
+  &__item
+    display: block
+    margin-bottom: 10px
+    border-bottom: 2px solid #dbdbdb
+    h3
+      font-size: 18px
+      +pfl
+      color: #787878
+      margin-bottom: 5px
+      line-height: 1.1em
+      span
+        color: #ffffff
+
+
+  &__watch
+    position: relative
+    float: left
+    margin-right: 100px
+    img
+      width: 225px
+      height: 410px
+    .specs__text-degree
+      text-align: center
+      position: absolute
+      bottom: -70px
+      text-transform: uppercase
+      +pfl
+      color: #ffffff
+      font-size: 24px
+      left: 17%
+      .degree
+        font-family: 'conv_pfdintextcondpro-bold'
+
+      p
+        text-transform: none
+        margin-top: 5px
+        font-size: 14px
+        line-height: 1em
+      &:before
+        position: absolute
+        content: ""
+        top: -140px
+        left: 72px
+        background: url(../img/arrows.png) center no-repeat
+        width: 280px
+        height: 111px
+    .prev
+      position: absolute
+      left: -50px
+      bottom: 205px
+      content: ""
+      +s(prev)
+      cursor: pointer
+    .next
+      position: absolute
+      right: -50px
+      bottom: 205px
+      content: ""
+      +s(next)
+      cursor: pointer
+  &__small
+    float: left
+    margin-top: 35px
+    margin-bottom: 35px
+    clear: both
+    +clr
+    ul
+      li
+        float: left
+        margin-right: 10px
+        position: relative
+  .button--big
+    +clr
+    clear: both
+    text-decoration: none
+    padding: 10px 0
+
+
 .choose
   padding-top: 50px
   padding-bottom: 70px
@@ -280,117 +430,6 @@ header
 
 
 
-.specs
-  padding-top: 40px
-  padding-bottom: 80px
-  +clr
-  +box
-  h2
-    margin-bottom: 20px
-  .specs_in
-    @extend %in
-    +clr
-  &__items
-    float: left
-    width: 240px
-    margin-top: 20px
-  &__item
-    display: block
-    margin-bottom: 30px
-    margin-right: 20px
-    h3
-      font-size: 24px
-      +pfl
-      color: #be0a0a
-      text-transform: uppercase
-    hr
-      height: 2px
-      +background-image(linear-gradient(to left, #ffefe5 0%, #f9d1b3 100%))
-      border: none
-      margin: 0 0 5px
-    h4
-      +pfl
-      font-size: 18px
-  &__watch
-    position: relative
-    float: right
-    margin-right: 30px
-    margin-top: 25px
-    img
-      width: 380px
-      height: 390px
-    .specs__text-degree
-      position: absolute
-      top: 0
-      left: -55px
-      width: 160px
-      height: 110px
-      z-index: 100
-      span
-        position: relative
-        font-family: 'uni_sansheavy_caps'
-        font-size: 24px
-        line-height: 1em
-        letter-spacing: 3px
-        padding-left: 50px
-        display: inline-block
-        &:before
-          position: absolute
-          content: ""
-          top: 8px
-          left: 0
-          +s(360)
-      p
-        font-size: 14px
-        color: #5a5a5a
-        font-family: 'conv_pfdintextcondpro-lightital'
-        width: 110px
-    .prev
-      position: absolute
-      left: -20px
-      top: 165px
-      content: ""
-      cursor: pointer
-      +s(prev)
-    .next
-      position: absolute
-      right: -20px
-      top: 165px
-      content: ""
-      cursor: pointer
-      +s(next)
-  &__small
-    float: left
-    margin-left: 20px
-    clear: both
-
-    ul
-      li
-        float: left
-        margin-right: 45px
-        position: relative
-        width: 70px
-        &:before
-          position: absolute
-          content: ""
-          top: 2px
-          left: -40px
-
-        &.first
-          &:before
-            +s(specs_ico1)
-            left: -20px
-        &.second
-          &:before
-            +s(specs_ico2)
-            left: -26px
-        &.third
-          &:before
-            +s(specs_ico3)
-            left: -26px
-        &.fourth
-          &:before
-            +s(specs_ico4)
 
 .reviews
   h2
